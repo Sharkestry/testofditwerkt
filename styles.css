@@ -1,0 +1,234 @@
+html{
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    overflow: auto;
+    /*standaard spul voor alles in html*/
+}
+body{
+    width: 96%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    border: 1px solid;
+    overflow: inherit;
+    background-color: #fff;
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    /*spul in de body*/
+}
+h3 {
+    margin: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    /*voor dit lettertype is dit specifiek ervoor gemaakt*/
+}
+
+nav {
+    
+        flex-direction: row;
+        flex: 1;
+    
+    width: 100%;
+flex: 1;
+/* een poging op een flexbox, ik heb geen idee hoe dit werkt en dan nog een deel van de nav zelf*/
+ }
+
+nav ul {text-align: center;
+margin: 0 0 0 0;
+padding-left: 0; 
+display: flex;}
+/* ik kreeg de flexbox niet aan de gang zoals te zien is
+maar ik wou wel dat het balkje horizontaal was doet zocht ik op het
+internet op en kwam uit op display: flex; wat werkte dus zette ik dat erin */
+nav ul li { list-style-type: none; }
+nav ul li {
+    width: 25%;
+    background: linear-gradient(#6B5543, #89CFF0, #6B5543) /* dit is de balk */
+}a { text-decoration: none; }
+nav ul li a {
+    font-size: 1.7rem;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+nav ul li a:hover,
+nav ul li a:focus {color: #6B5543; }
+
+
+
+
+a:hover{
+    background-color: gray;
+    opacity: 0.5;
+    letter-spacing: 5px;
+    }
+
+
+    /* 
+    ik weet niet precies hoe het werkt met flexbox zorgen dat de nav links goed staan
+    */
+    container {
+        flex-direction: row;
+        flex: 1;
+        height: 250px;
+    width: 1000px;
+    }
+    #logo {margin-top: 15px;
+        padding-top:10%;
+    background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    } 
+
+
+    #disc {
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.8;
+        width: 400px;
+        height: 400px;
+        margin-top: 10%;
+        background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #89CFF0 0%, #89CFF0 100%, #89CFF0 95% );
+        background-image: -webkit-radial-gradient( 45px 45px, circle cover, #6B5543 60% /*procent doet hoe veel gradient er is */, #89CFF0);
+        background-image: radial gradient( 45px 45px 45deg, circle cover, #89CFF0 0%, #89CFF0 100%, #89CFF0 95%);
+        animation-name: revolutie;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    } /* dit was best wel makkelijk vergeleken met wat ik had verwacht, er word vermeld hoeveel graden het in
+    de animatie moet draaien en voor hoe lang wat natuurlijk infinite is */
+
+    /* standard */
+    @keyframes revolutie { from {transform: rotate(0deg)}to {transform: rotate(360deg)}}
+
+    #center{width: 105px;
+    height: 105px;
+background: #6B5543;
+position: relative;
+top: 37%;
+left: 37%; 
+display: block;
+border: 0.5px solid #fff; /* dit is de rand van de disc, was eerst #fff */
+border-radius: 50%;}
+
+#pager a { font-size: 2rem;
+font-weight: bolder;
+text-decoration: none;
+border-radius: 50%;
+box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8); 
+padding-left: 10px;
+padding-right: 10px;
+}
+/* dit is grotendeels dingen voor knoppen*/
+#pager a:hover {opacity: 0.7;
+filter: alpha(opacity=40); 
+font-size: 2.3rem;
+background-image: linear-gradient(to bottom, #6B5543(0, 80%, 50%), white);
+}
+
+#vorige {
+    z-index: 1;
+margin-left: 5px;
+position: fixed;
+top:45%;
+left: 4%; 
+}
+#volgende {
+    z-index: 1;
+    margin-right: 5px;
+    position: absolute;
+    top: 45%;
+    right: 4%;
+}
+footer {position: fixed;
+bottom: 0;
+right: 0;
+left: 0;
+margin: 0;
+float: left;
+text-align:center;
+width: 100%;
+padding-top: 20px;
+padding-bottom: 10px;
+background: linear-gradient(to right, gray, gray, gray, #89CFF0, gray, gray, gray);
+/* een regenboog footer die gebruik maakt van een gradient tope: #6B5543*/
+}
+footer img {
+    margin: 0;
+    width: 4%;
+}
+footer p {
+    margin: 0;
+    color: #6B5543;
+}form{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+}
+fieldset { border: solid 1px #6B5543;
+widows: 70%;margin: auto;
+border-radius: 2%;
+background-image: linear-gradient(to bottom, #6B5543(0, 80%, 50%), gray);
+}
+legend { font-size: 1.5em;
+font-weight: bold;}
+fieldset { border: solid 2px #6B5543;
+width: 70%;
+margin: auto;
+border-radius: 2%;
+background-image: linear-gradient(to bottom, #6B5543(0, 80%, 50%), gray);
+}
+/* voor sommige dingen zoals text-align:center of the font size
+beschijft de code zelf al wat het doet dus is er weinig wat
+ik erover can vertellen.*/
+
+input,
+select,
+textarea {
+    border: solid 1px rgb(0, 0, 0,);
+    margin: 5px;
+    padding: 5px 30px 5px 50px;
+    width: 50%; text-align: center;
+    font-size: 1em;
+    border-radius: 5px;
+}
+input:focus,
+textarea:focus { box-shadow: 6px 6px 10px #6B5543; }
+select {
+    width: 35%;
+} 
+input[type=date] { width: 25%;}
+input[type=checkbox],
+input[type=raido] { width: 4%}
+input [type=submit] {
+    background-color: #6B5543;
+    width: 43%;
+    opacity: 0.4;
+}
+input[type=submit]:hover {
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+#contact {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: justify;
+    line-height: 1.6em;
+}
+#contact span { font-size: 1.3rem;
+letter-spacing: 5px;
+text-shadow: 2px 2px 4px #6B5543;
+text-transform: uppercase; }
+#contact span {
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px #6B5543;
+    text-transform: uppercase;
+}
+input[type=submit]:hover {opacity: 1;
+transition: opacity 0.5s linear;}
